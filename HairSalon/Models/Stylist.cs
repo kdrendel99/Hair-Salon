@@ -6,12 +6,14 @@ namespace HairSalon.Models
   {
     private static List<Stylist> _instances = new List<Stylist> {};
     public string Name { get; set; }
+    public string Details { get; set; }
     public int Id { get; }
     public List<Client> Clients { get; set; }
 
-    public Stylist(string stylistName)
+    public Stylist(string stylistName, string stylistDetails)
     {
       Name = stylistName;
+      Details = stylistDetails;
       _instances.Add(this);
       Id = _instances.Count;
       Clients = new List<Client>{};
