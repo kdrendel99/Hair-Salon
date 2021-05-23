@@ -1,7 +1,6 @@
 # _Hair Salon_
 
 #### _ASP.NET core MVC application using Entity Framework Core and MySQL to support a salon website.
-._
 
 #### _By **Karlson Drendel**_
 
@@ -24,7 +23,7 @@
 * _.NET 5 Framework_
 *_ASP.NET Core_
 *_MVC 2.2_
-*_MySQL + MySQL Workbench -v 8.0.15
+*_MySQL + MySQL Workbench -v 8.0.15_
 *_RESTful Routing_
 *_CRUD Functionality_
 *_Git_
@@ -37,21 +36,21 @@ _Collect user input in a web-based application. This application was build to pr
 ##Setup Database
 
 Run the following commands in MySQL to setup this project Database
-    ```
-    CREATE SCHEMA `karlson_drendel` ;
-    CREATE TABLE `karlson_drendel`.`stylists` (
-      `StylistId` INT NOT NULL AUTO_INCREMENT,
-      `name` VARCHAR(45) NULL,
-      `details` VARCHAR(255) NULL,
-      PRIMARY KEY (`StylistId`));
+  ```
+  CREATE SCHEMA `karlson_drendel` ;
+  CREATE TABLE `karlson_drendel`.`stylists` (
+    `StylistId` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(45) NULL,
+    `details` VARCHAR(255) NULL,
+    PRIMARY KEY (`StylistId`));
 
-    CREATE TABLE `karlson_drendel`.`clients` (
-      `ClientId` INT NOT NULL AUTO_INCREMENT,
-      `name` VARCHAR(45) NULL,
-      `StylistId` INT NULL DEFAULT '0',
-      PRIMARY KEY (`ClientId`));
+  CREATE TABLE `karlson_drendel`.`clients` (
+    `ClientId` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(45) NULL,
+    `StylistId` INT NULL DEFAULT '0',
+    PRIMARY KEY (`ClientId`));
 
-    ```
+  ```
     
     
 Create appsettings.json, and add this code into it:
